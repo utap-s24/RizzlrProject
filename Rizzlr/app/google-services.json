@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "332695541834",
+    "project_id": "rizzlr-59d32",
+    "storage_bucket": "rizzlr-59d32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332695541834:android:782cfc93803801b8772eb3",
+        "android_client_info": {
+          "package_name": "edu.utap.firenote"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANX0mwXdoNqE5earEwY94BrYGNn7PA1DI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

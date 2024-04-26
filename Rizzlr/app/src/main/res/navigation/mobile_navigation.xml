@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homepageFragment">
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="edu.utap.firenote.view.ChatFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_chat" >
+        <argument
+            android:name="recipientID"
+            app:argType="string"/>
+        <argument
+            android:name="recipientName"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/homepageFragment"
+        android:name= "edu.utap.firenote.view.HomePageFragment"
+        android:label="Home Page"
+        tools:layout="@layout/homepage"
+        >
+
+        <action
+            android:id="@+id/action_navigation_homepage_to_chat"
+            app:destination="@id/chatFragment" >
+
+            <argument
+                android:name="recipientID"
+                app:argType="string"/>
+        </action>
+
+        <action
+            android:id="@+id/action_navigation_homepage_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_navigation_homepage_to_stats"
+            app:destination="@id/stats" />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/settings"
+        android:name= "edu.utap.firenote.view.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/settings"
+        >
+
+        <action
+            android:id="@+id/settingsFragment_to_loginFragment"
+            app:destination="@id/homepageFragment" />
+
+        <action
+            android:id="@+id/settingsFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+
+        <action
+            android:id="@+id/settingsFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+
+
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/privacyFragment"
+        android:name= "edu.utap.firenote.view.PrivacyPolicyFragment"
+        android:label="Privacy"
+        tools:layout="@layout/privacy"
+        >
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/changePasswordFragment"
+        android:name= "edu.utap.firenote.view.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/changepassword" >
+
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/stats"
+        android:name= "edu.utap.firenote.view.StatsFragment"
+        android:label="Stats"
+        tools:layout="@layout/stats"
+        >
+        <argument
+            android:name="currentRating"
+            app:argType="string"/>
+        <argument
+            android:name="maxRating"
+            app:argType="string"/>
+        <argument
+            android:name="messagesReceived"
+            app:argType="integer"/>
+        <argument
+            android:name="messagesSent"
+            app:argType="integer"/>
+    </fragment>
+
+
+</navigation>
